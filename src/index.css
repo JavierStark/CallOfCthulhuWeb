@@ -1,7 +1,24 @@
+/*#182747*/
+/*#562B08*/
+/*#647E68*/
+/*#D8D8D8*/
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+
+:root {
+    --primary-background: #D8D8D8;
+    --secondary-background: #647E68;
+    --primary-text: #182747;
+    --secondary-text: #562B08;
+
+    --primary-button: #182747;
+    --primary-button-hover: #2f4573;
+
+    --animation: all 0.3s ease;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -19,34 +36,58 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
+
+    box-sizing: border-box;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+    font-size: large;
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
 input {
-
+    box-sizing: border-box;
 }
+
+button {
+    color: var(--primary-background);
+    background-color: var(--primary-button);
+
+    border: 0;
+    border-radius: .45rem;
+
+    padding: .5rem 1rem;
+}
+
+button:hover {
+    background-color: var(--primary-button-hover);
+}
+
