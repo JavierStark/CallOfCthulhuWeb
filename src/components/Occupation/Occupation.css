@@ -1,0 +1,50 @@
+.occupation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+
+    justify-items: center;
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+select {
+    border: none;
+    border-radius: 5px;
+
+    outline: none;
+    background-color: var(--primary-button-hover);
+    color: var(--primary-background);
+
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.info-div {
+    padding: 2vh;
+    margin-top: 2vh;
+
+    background-color: var(--secondary-background);
+    border-radius: 5px;
+
+    display: grid;
+
+    width: 70%;
+    height: 100%;
+
+
+    gap: 1rem;
+
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .info-div {
+        width: 90%;
+    }
+}

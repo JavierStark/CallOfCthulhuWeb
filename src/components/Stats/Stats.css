@@ -1,4 +1,4 @@
-.container {
+.stats-container {
     display: grid;
 
     width: 100%;
@@ -74,15 +74,27 @@ form {
     transition: var(--animation);
 }
 
+.submit-button {
+    grid-column: 1/3;
+    width: 50%;
+    height: 8rem;
+
+    font-size: 2rem;
+    transition: var(--animation);
+
+    margin-top: 3rem;
+}
+
 @media only screen and (max-width: 800px) {
-    .container {
+    .stats-container {
         grid-template-columns: 1fr;
     }
 
-    .other-stats {
+    .other-stats, .submit-button {
         grid-column: 1;
         width: 80%;
     }
+
 
     .roll-button {
         height: 5rem;

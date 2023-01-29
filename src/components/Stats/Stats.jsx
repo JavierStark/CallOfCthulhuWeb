@@ -1,6 +1,7 @@
 import './Stats.css';
 
 import React, {useEffect, useState} from 'react';
+import {useNavigate} from "react-router-dom";
 
 const Stats = () => {
   const [stats, setStats] = useState({
@@ -19,6 +20,7 @@ const Stats = () => {
     build: 0,
     mov: 0
   });
+  const navigate = useNavigate();
 
   const roll = (n, dice) => {
     let result = 0;
@@ -98,7 +100,16 @@ const Stats = () => {
   }
 
   const handleSubmit = (event) => {
+    event.preventDefault();
+    let newStats = {};
+    for (let t of event.target) {
+      if (!t.value) continue;
+      newStats = {...newStats, [t.name]: t.value};
+    }
+    console.log(newStats);
+    window.localStorage.setItem("stats", JSON.stringify(newStats));
 
+    navigate('/occupation');
   }
 
   useEffect(() => {
@@ -108,7 +119,7 @@ const Stats = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className={'container'}>
+      <div className={'stats-container'}>
         <div className={'primary-stats stats'}>
           <div>
             <label>Strength</label>
@@ -215,6 +226,9 @@ const Stats = () => {
                    disabled/>
           </div>
         </div>
+
+        <button type={'submit'} className={'submit-button'} name={'submitStats'}>Submit
+        </button>
       </div>
     </form>
   );
