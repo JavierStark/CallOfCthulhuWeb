@@ -3,7 +3,10 @@
     "name": "Accountant",
     "description": " Either employed within a business or working as a freelance consultant with a portfolio of self-employed clients or businesses. Diligence and an attention to detail means that most accountants can make good researchers, being able to support investigations through the careful analysis of personal and business transactions, financial statements, and other records.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "30–70",
+    "creditRating": [
+      "30",
+      "70"
+    ],
     "suggestedContacts": "Business associates, legal professions, financial sector (bankers, other accountants).",
     "skills": "Accounting, Law, Library Use, Listen, Persuade, Spot Hidden, any two other skills as personal or era specialties (e.g. Computer Use)."
   },
@@ -11,7 +14,10 @@
     "name": "Acrobat",
     "description": " Acrobats may be either amateur athletes competing in staged meets—possibly even the Olympics—or professionals employed with the entertainment sector (e.g. circuses, carnivals, theatrical performances).",
     "occupationSkillsPoints": "EDU × 2 + DEX × 2",
-    "creditRating": "9–20",
+    "creditRating": [
+      "9",
+      "20"
+    ],
     "suggestedContacts": "Amateur athletic circles, sports writers, circuses, carnivals.",
     "skills": "Climb, Dodge, Jump, Throw, Spot Hidden, Swim, any two other skills as personal or era specialties."
   },
@@ -19,7 +25,10 @@
     "name": "Stage Actor",
     "description": "",
     "occupationSkillsPoints": "EDU × 2 + APP × 2",
-    "creditRating": "9–40",
+    "creditRating": [
+      "9",
+      "40"
+    ],
     "suggestedContacts": "Theatre industry, newspaper arts critics, actor’s guild or union.",
     "skills": "Art/Craft (Acting), Disguise, Fighting, History, two interpersonal skills (Charm, Fast Talk, Intimidate, or Persuade), Psychology, any one other skill as a personal or era specialty."
   },
@@ -27,7 +36,10 @@
     "name": "Film Star",
     "description": "",
     "occupationSkillsPoints": "EDU × 2 + APP × 2",
-    "creditRating": "20–90",
+    "creditRating": [
+      "20",
+      "90"
+    ],
     "suggestedContacts": "Film industry, media critics, writers.",
     "skills": "Art/Craft (Acting), Disguise, Drive Auto, two interpersonal skills (Charm, Fast Talk, Intimidate, or Persuade), Psychology, any two other skills as personal or era specialties (e.g. Ride or Fighting)."
   },
@@ -35,7 +47,10 @@
     "name": "Agency Detective",
     "description": " Numerous well-known detective agencies exist around the world, with probably the most famous being the Pinkerton and Burns agencies (merged into one in modern times). Large agencies employ two types of agents: security guards and operatives. Guards are uniformed patrolmen, hired by companies and individuals to protect property and people against burglars, assassins and kidnappers. Use the Uniformed Police Officer’s description for these characters. Company Operatives are plainclothes detectives, sent out on cases requiring them to solve mysteries, prevent murders, locate missing people, and so on.",
     "occupationSkillsPoints": "EDU × 2 + (STR × 2 or DEX × 2)",
-    "creditRating": "20–45",
+    "creditRating": [
+      "20",
+      "45"
+    ],
     "suggestedContacts": "Local law enforcement, clients.",
     "skills": "One interpersonal skill (Charm, Fast Talk, Intimidate or Persuade), Fighting (Brawl), Firearms, Law, Library Use, Psychology, Stealth, Track."
   },
@@ -43,7 +58,10 @@
     "name": "Alienist [Classic]",
     "description": " In the 1920s, \"alienist\" is the term given for those who treat mental illness (early psychiatrists). Psychoanalysis is barely known in the U.S., and its basis in sexual life and toilet training is felt to be indecent. Psychiatry, a standard medical education augmented by behaviorism, is more common. Intellectual wars rage between alienists, psychiatrists, and neurologists.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "10–60",
+    "creditRating": [
+      "10",
+      "60"
+    ],
     "suggestedContacts": "Others in the field of mental illness, medical doctors, and occasionally detectives in law enforcement.",
     "skills": "Law, Listen, Medicine, Other Language, Psychoanalysis, Psychology, Science (Biology), (Chemistry)."
   },
@@ -51,7 +69,10 @@
     "name": "Animal Trainer",
     "description": " May be employed by film studios, a travelling circus, a horse stable, or possibly working freelance. Whether training guide dogs for the blind or teaching a lion to jump through a flaming hoop, the animal trainer usually works alone, spending long hours in proximity with the animals in their care. An animal trainer can use the Psychology skill with animals as well as people.",
     "occupationSkillsPoints": "EDU × 2 + (APP × 2 or POW × 2)",
-    "creditRating": "10–40",
+    "creditRating": [
+      "10",
+      "40"
+    ],
     "suggestedContacts": "Zoos, circus folk, patrons, actors.",
     "skills": "Jump, Listen, Natural World, Psychology, Science (Zoology), Stealth, Track, any one other skill as a personal or era specialty."
   },
@@ -59,7 +80,10 @@
     "name": "Antiquarian [Lovecraftian]",
     "description": " A person who delights in the timeless excellence of design and execution, and in the power of ancient lore. Probably the most Lovecraft-like occupation available to an investigator. An independent income allows the antiquarian to explore things old and obscure, perhaps sharpening their focus down particular lines of enquiry based on personal preference and interest. Usually a person with an appreciative eye and a swift mind, who frequently finds mordant or contemptuous humor in the foolishness of the ignorant, the pompous, and the greedy.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "30–70",
+    "creditRating": [
+      "30",
+      "70"
+    ],
     "suggestedContacts": "Booksellers, antique collectors, historical societies.",
     "skills": "Appraise, Art/Craft (any), History, Library Use, Other Language, one interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade), Spot Hidden, any one other skill as a personal or era specialty."
   },
@@ -67,7 +91,10 @@
     "name": "Antique Dealer",
     "description": " Antique dealers usually own their own shop, retail items out of their homes, or go on extended buying trips, making a profit on reselling to urban stores.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "30–50",
+    "creditRating": [
+      "30",
+      "50"
+    ],
     "suggestedContacts": "Local historians, other antique dealers, possibly criminal fences.",
     "skills": "Accounting, Appraise, Drive Auto, two interpersonal skills (Charm, Fast Talk, Intimidate, or Persuade), History, Library Use, Navigate."
   },
@@ -75,7 +102,10 @@
     "name": "Archaeologist [Lovecraftian]",
     "description": " The study and exploration of the past. Primarily the identification, examination, and analysis of recovered materials relating to human history. The work involves painstaking research and meticulous study, not to mention a willing attitude to getting one’s hands dirty. In the 1920s, successful archaeologists became celebrities, seen as explorers and adventurers. While some used scientific methods, many were happy to apply brute force when unveiling the secrets of the past— the use of dynamite was sometimes common. Such bullish behavior would be frowned upon in modern times.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "10–40",
+    "creditRating": [
+      "10",
+      "40"
+    ],
     "suggestedContacts": "Patrons, museums, universities.",
     "skills": "Appraise, Archaeology, History, Other Language (any), Library Use, Spot Hidden, Mechanical Repair, Navigate or Science (e.g. chemistry, physics, geology, etc.)"
   },
@@ -83,7 +113,10 @@
     "name": "Architect",
     "description": " Architects are trained to design and plan buildings, whether a small conversion to a private house or a multi-million dollar construction project. The architect will work closely with the project manager and oversee the construction. Architects must be aware of local planning laws, health and safety regulation, and general public safety. Some may work for large firms or work freelance. A lot will depend on reputation. In the 1920s, many try and go it alone, working out of their house or a small office. Few manage to sell the grandiose designs they all nurse. Architecture may also encompass specialist areas like naval architecture and landscape architecture.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "30–70",
+    "creditRating": [
+      "30",
+      "70"
+    ],
     "suggestedContacts": "Local building and city engineering departments, construction firms.",
     "skills": "Accounting, Art/Craft (Technical Drawing), Law, Own Language, Computer Use or Library Use, Persuade, Psychology, Science (Mathematics)."
   },
@@ -91,7 +124,10 @@
     "name": "Artist",
     "description": " May be a painter, sculptor, etc. Sometimes self-absorbed and driven with a particular vision, sometimes blessed with a great talent that is able to inspire passion and understanding. Talented or not, the artist’s ego must be hardy and strong to surmount initial obstacles and critical appraisal, and to keep them working if success arrives. Some artists care not for material enrichment, while others have a keen entrepreneurial streak.",
     "occupationSkillsPoints": "EDU × 2 + (DEX × 2 or POW × 2)",
-    "creditRating": "9–50",
+    "creditRating": [
+      "9",
+      "50"
+    ],
     "suggestedContacts": "Art galleries, critics, wealthy patrons, the advertising industry.",
     "skills": "Art/Craft (any), History or Natural World, one interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade), Other Language, Psychology, Spot Hidden, any two other skills as personal or era specialties."
   },
@@ -99,7 +135,10 @@
     "name": "Asylum Attendant",
     "description": " Although there are private sanitariums for those few who can afford them, the vast bulk of the mentally ill are housed in state and county facilities. Aside from a few doctors and nurses, they employ a large number of attendants, often chosen more for their strength and size rather than medical learning.",
     "occupationSkillsPoints": "EDU × 2 + (STR × 2 or DEX × 2)",
-    "creditRating": "8–20",
+    "creditRating": [
+      "8",
+      "20"
+    ],
     "suggestedContacts": "Medical staff, patients, and relatives of patients. Access to medical records, as well as drugs and other medical supplies.",
     "skills": "Dodge, Fighting (Brawl), First Aid, two interpersonal skills (Charm, Fast Talk, Intimidate, or Persuade), Listen, Psychology, Stealth."
   },
@@ -107,7 +146,10 @@
     "name": "Athlete",
     "description": " Probably plays in a professional baseball, football, cricket, or basketball team. This may be a major league team with a regular salary and national attention or—particularly in the case of 1920s baseball—one of many minor league teams, some of them owned and operated by major league owners. The latter pay barely enough to keep players fed and on the team. Successful professional athletes will enjoy a certain amount of celebrity within the arena of their expertise— more so in the present day where sporting heroes stand side by side with film stars on red carpets around the world.",
     "occupationSkillsPoints": "EDU × 2 + (DEX × 2 or STR × 2)",
-    "creditRating": "9–70",
+    "creditRating": [
+      "9",
+      "70"
+    ],
     "suggestedContacts": "Sports personalities, sports writers, other media stars.",
     "skills": "Climb, Jump, Fighting (Brawl), Ride, one interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade), Swim, Throw, any one other skill as a personal or era specialty."
   },
@@ -115,7 +157,10 @@
     "name": "Author [Lovecraftian]",
     "description": " As distinct from the journalist, the author uses words to define and explore the human condition, especially the range of human emotions. Their labors are solitary and the rewards solipsistic: only a relative handful make much money in the present day, though in previous eras the trade once provided a regular living wage. The work habits of authors vary widely. Typically an author might spend months or years researching in preparation for a book, then withdrawing for periods of intense creation.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "9–30",
+    "creditRating": [
+      "9",
+      "30"
+    ],
     "suggestedContacts": "publishers, critics, historians, etc.",
     "skills": "Art (Literature), History, Library Use, Natural World or Occult, Other Language, Own Language, Psychology, any one other skill as a personal or era specialty."
   },
@@ -123,7 +168,10 @@
     "name": "Bartender",
     "description": " Normally not the owner of the bar, the bartender is everyone’s friend. For some it’s a career or their business, for many it's a means to an end. In the 1920s the profession is made illegal by the Prohibition Act; however, there’s no shortage of work for a bartender, as someone has to serve the drinks in the speakeasies and secret gin joints.",
     "occupationSkillsPoints": "EDU × 2 + APP × 2",
-    "creditRating": "8–25",
+    "creditRating": [
+      "8",
+      "25"
+    ],
     "suggestedContacts": "Regular customers, possibly organized crime.",
     "skills": "Accounting, two interpersonal skills (Charm, Fast Talk, Intimidate, or Persuade), Fighting (Brawl), Listen, Psychology, Spot Hidden, any one other skill as a personal or era specialty."
   },
@@ -131,7 +179,10 @@
     "name": "Big Game Hunter",
     "description": " Big game hunters are skilled trackers and hunters who usually earn their living leading safaris for wealthy clients. Most are specialized in one part of the world, such as the Canadian woods, African plains, and other locales. Some hunters may work for the black market, capturing live exotic species for private collectors, or trading in illegal or morally objectionable animal products like skins, ivory, and the like—although in the 1920s such activities were more common and were permissible under most countries’ laws. Although the \"great white hunter\" is the quintessential type, others may be simply local indigenous people who escort hunters through the backwoods of the Yukon in search of moose or bear.",
     "occupationSkillsPoints": "EDU × 2 + (DEX × 2 or STR × 2)",
-    "creditRating": "20–50",
+    "creditRating": [
+      "20",
+      "50"
+    ],
     "suggestedContacts": "Foreign government officials, game wardens, past (usually wealthy) clients, black-market gangs and traders, zoo owners.",
     "skills": "Firearms, Listen or Spot Hidden, Natural World, Navigate, Other Language or Survival (any), Science (Biology or Botany), Stealth, Track."
   },
@@ -139,7 +190,10 @@
     "name": "Book Dealer",
     "description": " A book dealer may be the owner of a retail outlet or niche mail order service, or specialize in buying trips across the country and even overseas. Many will have wealthy or regular clients, who provide lists of sought-after and rare works.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "20–40.",
+    "creditRating": [
+      "20",
+      "40."
+    ],
     "suggestedContacts": "Bibliographers, book dealers, libraries and universities, clients.",
     "skills": "Accounting, Appraise, Drive Auto, History, Library Use, Own Language, Other Language, one interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)."
   },
@@ -147,7 +201,10 @@
     "name": "Bounty Hunter",
     "description": " Bounty hunters track down and return fugitives to justice. Most often, freelancers are employed by Bail Bondsmen to track down bail jumpers. Bounty hunters may freely cross state lines in pursuit of their quarry and may show little regard for civil rights and other technicalities when capturing their prey. Breaking and entering, threats, and physical abuse are all part of the successful bounty hunter’s bag of tricks. In modern times this may stem to illegal phone taps, computer hacking, and other covert surveillance.",
     "occupationSkillsPoints": "EDU × 2 + (DEX × 2 or STR × 2)",
-    "creditRating": "9–30",
+    "creditRating": [
+      "9",
+      "30"
+    ],
     "suggestedContacts": "Bail bondsmen, local police, criminal informants.",
     "skills": "Drive Auto, Electronic or Electrical Repair, Fighting or Firearms, one interpersonal skill (Fast Talk, Charm, Intimidate, or Persuade), Law, Psychology, Track, Stealth."
   },
@@ -155,7 +212,10 @@
     "name": "Boxer/Wrestler",
     "description": " Professional boxers and wrestlers are managed by individuals (promoters) possibly backed by outside interests, and usually locked into contracts. Professional boxers and wrestlers work and train full-time. Amateur boxing competitions abound, a training ground for those aspiring to professional status. In addition, amateur and post-professional boxers and wrestlers can sometimes be found making a living from illegal bare-knuckle fights, usually arranged by organized crime gangs or entrepreneurial locals.",
     "occupationSkillsPoints": "EDU × 2 + STR × 2",
-    "creditRating": "9–60",
+    "creditRating": [
+      "9",
+      "60"
+    ],
     "suggestedContacts": "Sports promoters, journalists, organized crime, professional trainers.",
     "skills": "Dodge, Fighting (Brawl), Intimidate, Jump, Psychology, Spot Hidden, any two other skills as personal or era specialties."
   },
@@ -163,7 +223,7 @@
     "name": "Butler/Valet/Maid",
     "description": " This occupation covers those who are employed in a servant capacity and includes butler, valet, and lady’s maid. A butler is usually employed as a domestic servant for a large household. Traditionally the butler is charge of the dining room, wine cellar and pantry, and ranks as the highest male servant. Usually male—a housekeeper would be the female equivalent—the butler is responsible for male servants within the household. The duties of the butler will vary to according to the requirements of his employer. A valet or lady’s maid provides personal services, such as maintaining her employer's clothes, running baths, and effectively acting as a personal assistant. The work might include making travel arrangements, managing their employer’s diary, and organizing household finances.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "9–40 (dependent on their employer’s status and credit rating).",
+    "creditRating": "9,40 (dependent on their employer’s status and credit rating).",
     "suggestedContacts": "Waiting staff of other households, local businesses and household suppliers.",
     "skills": "Accounting or Appraise, Art/Craft (any, e.g. Cook, Tailor, Barber), First Aid, Listen, Other Language, Psychology, Spot Hidden, any two other skills as personal or era specialties."
   },
@@ -171,7 +231,10 @@
     "name": "Clergy, Member of the",
     "description": " The hierarchy of the Church usually assigns clergy to their respective parishes or sends them on evangelical missions, most often to a foreign country (see Missionary). Different churches have different priorities and hierarchies: for example, in the Catholic Church a priest may rise through the ranks of bishop, archbishop, and cardinal, while a Methodist pastor may in turn rise to district superintendent and bishop. Many clergy (not just Catholic priests) bear witness to confessions and, though they are not at liberty to divulge such secrets, they are free to act upon them. Some who work in the church are trained in professional skills, acting as doctors, lawyers, and scholars—as appropriate, use the occupation template which best describes the nature of the investigator’s work.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "9–60",
+    "creditRating": [
+      "9",
+      "60"
+    ],
     "suggestedContacts": "Church hierarchy, local congregations, community leaders.",
     "skills": "Accounting, History, Library Use, Listen, Other Language, one interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade), Psychology, any one other skill."
   },
@@ -179,7 +242,10 @@
     "name": "Computer Programmer/Technician",
     "description": " Usually designing, writing, testing, debugging, and/or maintaining the source code of computer programs, the computer programmer is an expert in many different subjects, including formal logic and application platforms. May work freelance or within the confines of a software development house. The computer technician is tasked with the development and maintenance of computer systems and networks, often working alongside other office staff (such as project managers) to ensure systems maintain integrity and provide desired functionality. Similar occupations may include: Database Administrator, IT Systems Manager, Multimedia Developer, Network Administrator, Software Engineer, Webmaster, etc. The computer hacker uses computers and computer networks as a means of protest to promote political ends (sometimes referred to as \"hacktivists\") or for criminal gain. Illegally breaking into computers and other user accounts is required, the outcome of which could be anything from defacing web pages, doxing, and swatting to email bombing designed to enact denials of service.",
     "occupationSkillsPoints": "EDU × 4",
-    "creditRating": "10–70",
+    "creditRating": [
+      "10",
+      "70"
+    ],
     "suggestedContacts": "IT workers, specialized Internet web communities, political groups, criminal enterprises.",
     "skills": "Computer Use, Electrical Repair, Electronics, Library Use, Spot Hidden, one interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade), any two other skills."
   },
@@ -187,7 +253,10 @@
     "name": "Cowboy/girl",
     "description": " Cowboys work the ranges and ranches of the West. Some own their own ranches, however many are simply hired where and when work is available. Good money can also be made by those willing to risk life and limb on the rodeo circuit, travelling between events for fame and glory. During the 1920s, a few found employment in Hollywood as stuntmen and extras in westerns; for example, Wyatt Earp worked as a technical advisor to the film industry. In modern times some ranches have opened their gates to holidaymakers wishing to experience life as a cowboy.",
     "occupationSkillsPoints": "EDU × 2 + (DEX × 2 or STR × 2)",
-    "creditRating": "9–20",
+    "creditRating": [
+      "9",
+      "20"
+    ],
     "suggestedContacts": "Local businesspeople, state agricultural departments, rodeo promoters, and entertainers.",
     "skills": "Dodge, Fighting or Firearms, First Aid or Natural World, Jump, Ride, Survival (any), Throw, Track."
   },
@@ -195,7 +264,10 @@
     "name": "Craftsperson",
     "description": " May be equally termed an artisan or master craftsperson. The craftsperson is essentially skilled in the manual production of items or materials. Normally quite talented individuals, some gaining a high reputation for works of art, while others provide a needed community service. Possible trades include: furniture, jewelry, watchmaker, potter, blacksmith, textiles, calligraphy, sewing, carpentry, book binding glassblowing, toy maker, stained glass, and so on.",
     "occupationSkillsPoints": "EDU × 2 + DEX × 2",
-    "creditRating": "10–40",
+    "creditRating": [
+      "10",
+      "40"
+    ],
     "suggestedContacts": "Local business people, other craftspersons and artists.",
     "skills": "Accounting, Art/Craft (any two), Mechanical Repair, Natural World, Spot Hidden, any two other skills as personal specialties."
   },
@@ -203,7 +275,10 @@
     "name": "Assassin",
     "description": "",
     "occupationSkillsPoints": "EDU × 2 + (DEX × 2 or STR × 2)",
-    "creditRating": "30–60",
+    "creditRating": [
+      "30",
+      "60"
+    ],
     "suggestedContacts": "Few, mostly underworld; people prefer not to know them too well. The best will have earned a formidable reputation on the street.",
     "skills": "Disguise, Electrical Repair, Fighting, Firearms, Locksmith, Mechanical Repair, Stealth, Psychology."
   },
@@ -211,7 +286,10 @@
     "name": "Bank Robber",
     "description": "",
     "occupationSkillsPoints": "EDU × 2 + (STR × 2 or DEX × 2)",
-    "creditRating": "5–75",
+    "creditRating": [
+      "5",
+      "75"
+    ],
     "suggestedContacts": "Other gang members (current and retired), criminal freelancers, organized crime.",
     "skills": "Drive Auto, Electrical or Mechanical Repair, Fighting, Firearms, Intimidate, Locksmith, Operate Heavy Machinery, any one other skill as personal or era specialty."
   },
@@ -219,7 +297,10 @@
     "name": "Bootlegger/Thug",
     "description": "",
     "occupationSkillsPoints": "EDU × 2 + STR × 2",
-    "creditRating": "5–30",
+    "creditRating": [
+      "5",
+      "30"
+    ],
     "suggestedContacts": "Organized crime, street-level law enforcement, local traders.",
     "skills": "Drive Auto, Fighting, Firearms, two interpersonal skills (Charm, Fast Talk, Intimidate, or Persuade), Psychology, Stealth, Spot Hidden."
   },
@@ -227,7 +308,10 @@
     "name": "Burglar",
     "description": "",
     "occupationSkillsPoints": "EDU × 2 + DEX × 2",
-    "creditRating": "5–40",
+    "creditRating": [
+      "5",
+      "40"
+    ],
     "suggestedContacts": "Fences, other burglars.",
     "skills": "Appraise, Climb, Electrical or Mechanical Repair, Listen, Locksmith, Sleight of Hand, Stealth, Spot Hidden."
   },
@@ -235,7 +319,10 @@
     "name": "Conman",
     "description": "",
     "occupationSkillsPoints": "EDU × 2 + APP × 2",
-    "creditRating": "10–65",
+    "creditRating": [
+      "10",
+      "65"
+    ],
     "suggestedContacts": "Other confidence artists, freelance criminals.",
     "skills": "Appraise, Art/Craft (Acting), Law or Other Language, Listen, two interpersonal skills (Charm, Fast Talk, Intimidate, or Persuade), Psychology, Sleight of Hand."
   }

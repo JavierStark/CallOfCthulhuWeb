@@ -5,16 +5,23 @@
 
     width: 100%;
 
-
-    justify-items: center;
-    gap: 1rem;
-
     padding: 1rem;
 }
 
-select {
+.occupation-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 60%;
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+.occupation-select {
     border: none;
     border-radius: 5px;
+
+    width: 100%;
 
     outline: none;
     background-color: var(--primary-button-hover);
@@ -24,27 +31,51 @@ select {
     font-size: 1.2rem;
 }
 
+.random-button {
+
+    font-size: 1.1rem;
+
+    width: 100%;
+}
+
 .info-div {
     padding: 2vh;
-    margin-top: 2vh;
 
     background-color: var(--secondary-background);
     border-radius: 5px;
 
+    grid-column: 1/3;
+
+
     display: grid;
 
-    width: 70%;
+    width: 100%;
     height: 100%;
 
 
     gap: 1rem;
 
+
     font-size: 1.3rem;
     text-align: center;
 }
 
+.submit-occupations-button {
+    grid-column: 1/3;
+    width: 100%;
+    height: 5rem;
+
+    font-size: 2rem;
+}
+
 @media only screen and (max-width: 800px) {
-    .info-div {
-        width: 90%;
+
+    .random-button {
+        margin: 1rem 0 0 0;
+        grid-column: 1;
+    }
+
+    .occupation-form {
+        grid-template-columns: 1fr;
     }
 }

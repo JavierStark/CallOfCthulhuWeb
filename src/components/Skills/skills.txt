@@ -1,0 +1,28 @@
+Axe (15%)—see Fighting
+Bow (15%)—see Firearms
+Brawl (25%)—see Fighting
+Chainsaw (10%)—see Fighting
+Computer Use (05%) [Modern]
+Demolitions (01%) [Uncommon]
+Dodge (half DEX)
+Electronics (01%) [Modern]
+Fighting (varies) [Specializations]
+Firearms (varies) [Specializations]
+Flail (10%)—see Fighting
+Flamethrower (10%)—see Firearms
+Garrote (15%)—see Fighting
+Handgun (20%)—see Firearms
+Heavy Weapons (10%)—see Firearms
+Hypnosis (01%) [Uncommon]
+Language (Other) (01%) [Specializations]
+Machine Gun (10%)—see Firearms
+Pilot (01%) [Specializations]
+Read Lips (01%) [Uncommon]
+Rifle (25%)—see Firearms
+Science (01%) [Specializations]
+Shotgun (25%)—see Firearms (Rifle/Shotgun)
+Spear (20%)—see Firearms (or Throw)
+Submachine Gun (15%)—see Firearms
+Survival (10%) [Specializations]
+Sword (20%)—see Fighting
+Whip (05%)—see Fighting

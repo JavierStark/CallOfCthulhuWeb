@@ -1,0 +1,61 @@
+.calculations-container {
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    border-radius: 5px;
+
+    background-color: var(--secondary-text);
+    color: var(--primary-background);
+
+    display: flex;
+
+    font-size: 1.5rem;
+}
+
+.skills-container {
+    padding: 1rem;
+
+    border-radius: 5px;
+
+    background-color: var(--secondary-background);
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(35, 1fr);
+
+    text-align: left;
+}
+
+.skill-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50vh;
+}
+
+.points-label {
+    margin: 0 0.5rem;
+}
+
+.skill-label {
+    margin-left: 1rem;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.skill-label:after {
+    content: '.................................................';
+}
+
+.points-input {
+    border: 0;
+    border-radius: 0.25rem;
+
+    margin-top: .3rem;
+    padding: .3rem;
+    font-size: 1.5rem;
+
+    text-align: center;
+
+    width: 70%;
+}
+
