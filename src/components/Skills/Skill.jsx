@@ -18,7 +18,7 @@ const Skill = props => {
       <input
         type="number"
         name={props.name}
-        value={props.value}
+        value={props.value || 0}
         id={props.name}
         onChange={(event) => props.handleChange(event, props.parent)}
       />

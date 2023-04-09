@@ -34,21 +34,23 @@ const Skills = () => {
       min: 0,
       current: 0,
 
-      acting: {
-        min: 0,
-        current: 0,
+    },
+    acting: {
+      min: 0,
+      current: 0,
+      parent: true,
+    },
+    fineArt: {
+      min: 0,
+      current: 0,
+      parent: true,
 
-      },
-      fineArt: {
-        min: 0,
-        current: 0,
+    },
+    photography: {
+      min: 0,
+      current: 0,
+      parent: true,
 
-      },
-      photography: {
-        min: 0,
-        current: 0,
-
-      },
     },
     artillery: {
       min: 0,
@@ -222,54 +224,78 @@ const Skills = () => {
     science: {
       min: 0,
       current: 0,
-      astronomy: {
-        min: 0,
-        current: 0,
-      },
-      biology: {
-        min: 0,
-        current: 0,
-      },
-      botany: {
-        min: 0,
-        current: 0,
-      },
-      chemistry: {
-        min: 0,
-        current: 0,
-      },
-      cryptography: {
-        min: 0,
-        current: 0,
-      },
-      forensics: {
-        min: 0,
-        current: 0,
-      },
-      geology: {
-        min: 0,
-        current: 0,
-      },
-      mathematics: {
-        min: 0,
-        current: 0,
-      },
-      meteorology: {
-        min: 0,
-        current: 0,
-      },
-      pharmacy: {
-        min: 0,
-        current: 0,
-      },
-      physics: {
-        min: 0,
-        current: 0,
-      },
-      zoology: {
-        min: 0,
-        current: 0,
-      },
+    },
+    astronomy: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    biology: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    botany: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    chemistry: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    cryptography: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    forensics: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    geology: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    mathematics: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    meteorology: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    pharmacy: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    physics: {
+      min: 0,
+      current: 0,
+      parent: true,
+
+    },
+    zoology: {
+      min: 0,
+      current: 0,
+      parent: true,
+
     },
     sleightOfHand: {
       min: 0,
@@ -316,8 +342,9 @@ const Skills = () => {
     let eduMultiplier = pointsExpressionList[0][3];
     points += stats.edu * eduMultiplier;
 
-    let secondStat = pointsExpressionList[1].replace(/[0-9]/, '');
+    if (pointsExpressionList.length < 2) return points;
 
+    let secondStat = pointsExpressionList[1].replace(/[0-9]/, '');
     let secondOperator = stats[secondStat];
 
     if (pointsExpressionList.length === 3) {
@@ -344,21 +371,31 @@ const Skills = () => {
   };
 
   const points = getSkillsPoint();
-  const [currentPoints, changeCurrentPoints] = useState(points);
+  const [currentPoints, changeCurrentPoints] = useState(0);
 
-  const handleChange = (event, parentSkill) => {
+  const handleChange = (event) => {
     const name = event.target.name;
-    const value = event.target.value;
-    console.log(name + " " + value + " " + parentSkill)
-    if (parentSkill) {
-      setSkills(previousInputs => {
-        return {...previousInputs, [parentSkill]: {...previousInputs[parentSkill], [name]: {current: value}}};
-      });
-    } else {
-      setSkills(previousInputs => {
-        return {...previousInputs, [name]: {current: value}};
-      });
-    }
+    let value = event.target.value;
+    value = Number.isNaN(value) ? 0 : value;
+    let oldValue;
+
+    if (value < 0) return;
+
+
+    oldValue = currentSkills[name].current;
+    if (!checkPointsLeft(oldValue, value)) return;
+
+    changeCurrentPoints(prevPoints => prevPoints + (value - oldValue));
+
+    setSkills(previousInputs => {
+      return {...previousInputs, [name]: {...previousInputs[name], current: value}};
+    });
+  }
+
+  const checkPointsLeft = (oldValue, newValue) => {
+    let change = newValue - oldValue;
+
+    return currentPoints + change <= 200;
   }
 
 
@@ -368,30 +405,15 @@ const Skills = () => {
         <label className={'points-label'} htmlFor={'totalPoints'}> Total Points</label>
         <input className={'points-input'} type="number" disabled value={points} id={'totalPoints'}/>
         <label className={'points-label'} htmlFor={'currentPoints'}> Points Left</label>
-        <input className={'points-input'} type="number" disabled value={currentPoints} id={'currentPoints'}/>
+        <input className={'points-input'} type="number" disabled value={points - currentPoints} id={'currentPoints'}/>
       </div>
       <div className={'skills-container'}>
         {
-          Object.entries(currentSkills).map(([skill, value]) => {
-            let valueEntries = Object.entries(value);
-            let specializations;
-
-            if (valueEntries.length > 3) {
-              valueEntries = valueEntries.slice(2);
-              specializations = valueEntries.map(([s, v]) =>
-                <Skill
-                  name={s}
-                  key={s}
-                  value={v.current || 0}
-                  parent={skill}
-                  handleChange={(event, parent) => handleChange(event, parent)}
-                />)
-            }
-
-            return <>
-              <Skill name={skill} key={skill} value={value.current || 0} handleChange={(e) => handleChange(e)}/>
-              {specializations}
-            </>
+          Object.entries(currentSkills).map(([skill, value], index) => {
+            return (
+              <Skill name={skill} key={index} value={value.current} parent={value.parent}
+                     handleChange={(e) => handleChange(e)}/>
+            )
           })
         }
       </div>
