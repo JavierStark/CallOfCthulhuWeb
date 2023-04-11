@@ -1,38 +1,38 @@
 import './Skills.css'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Skill from "./Skill.jsx";
 
 const Skills = () => {
 
   const [currentSkills, setSkills] = useState({
     accounting: {
-      min: 0,
-      current: 0,
+      min: 5,
+      current: 5,
 
     },
-    animalHandling: {
-      min: 0,
-      current: 0,
-
-    },
+    // animalHandling: {
+    //   min: 0,
+    //   current: 0,
+    //
+    // },
     anthropology: {
-      min: 0,
-      current: 0,
+      min: 1,
+      current: 1,
 
     },
     appraise: {
-      min: 0,
-      current: 0,
+      min: 5,
+      current: 5,
 
     },
     archaeology: {
-      min: 0,
-      current: 0,
+      min: 1,
+      current: 1,
 
     },
     artAndCraft: {
-      min: 0,
-      current: 0,
+      min: 5,
+      current: 5,
 
     },
     acting: {
@@ -52,19 +52,19 @@ const Skills = () => {
       parent: true,
 
     },
-    artillery: {
-      min: 0,
-      current: 0,
-
-    },
+    // artillery: {
+    //   min: 0,
+    //   current: 0,
+    //
+    // },
     charm: {
-      min: 0,
-      current: 0,
+      min: 15,
+      current: 15,
 
     },
     climb: {
-      min: 0,
-      current: 0,
+      min: 20,
+      current: 20,
 
     },
     creditRating: {
@@ -78,63 +78,68 @@ const Skills = () => {
 
     },
     disguise: {
-      min: 0,
-      current: 0,
+      min: 5,
+      current: 5,
 
     },
-    diving: {
-      min: 0,
-      current: 0,
-
-    },
+    // diving: {
+    //   min: 0,
+    //   current: 0,
+    //
+    // },
     dodge: {
       min: 0,
       current: 0,
 
     },
     driveAuto: {
-      min: 0,
-      current: 0,
+      min: 20,
+      current: 20,
 
     },
     electricalRepair: {
-      min: 0,
-      current: 0,
+      min: 10,
+      current: 10,
 
     },
     fastTalk: {
-      min: 0,
-      current: 0,
+      min: 5,
+      current: 2,
 
     },
     fighting: {
-      min: 0,
-      current: 0,
+      min: 25,
+      current: 25,
 
     },
-    firearms: {
-      min: 0,
-      current: 0,
+    firearmsHandgun: {
+      min: 20,
+      current: 20,
+
+    },
+    firearmsRifle_Shotgun: {
+      min: 20,
+      current: 20,
 
     },
     firstAid: {
-      min: 0,
-      current: 0,
+      min: 30,
+      current: 30,
 
     },
     history: {
-      min: 0,
-      current: 0,
+      min: 5,
+      current: 5,
 
     },
     intimidate: {
-      min: 0,
-      current: 0,
+      min: 15,
+      current: 15,
 
     },
     jump: {
-      min: 0,
-      current: 0,
+      min: 20,
+      current: 20,
 
     },
     languageOwn: {
@@ -143,87 +148,91 @@ const Skills = () => {
 
     },
     languageOther: {
-      min: 0,
-      current: 0,
+      min: 1,
+      current: 1,
 
     },
     law: {
-      min: 0,
-      current: 0,
+      min: 5,
+      current: 5,
 
     },
     libraryUse: {
-      min: 0,
-      current: 0,
+      min: 20,
+      current: 20,
 
     },
     listen: {
-      min: 0,
-      current: 0,
+      min: 20,
+      current: 20,
 
     },
     locksmith: {
-      min: 0,
-      current: 0,
+      min: 1,
+      current: 1,
 
     },
     mechanicalRepair: {
-      min: 0,
-      current: 0,
+      min: 10,
+      current: 10,
 
     },
     medicine: {
-      min: 0,
-      current: 0,
+      min: 1,
+      current: 1,
 
     },
     naturalWorld: {
-      min: 0,
-      current: 0,
+      min: 10,
+      current: 10,
 
     },
     navigate: {
-      min: 0,
-      current: 0,
+      min: 10,
+      current: 10,
 
     },
     occult: {
-      min: 0,
-      current: 0,
+      min: 5,
+      current: 5,
 
     },
-    operateHeavyMachinery: {
-      min: 0,
-      current: 0,
-
-    },
+    // operateHeavyMachinery: {
+    //   min: 0,
+    //   current: 0,
+    //
+    // },
     persuade: {
-      min: 0,
-      current: 0,
+      min: 10,
+      current: 10,
 
     },
     pilot: {
-      min: 0,
-      current: 0,
+      min: 1,
+      current: 1,
 
     },
     psychoanalysis: {
-      min: 0,
-      current: 0,
+      min: 1,
+      current: 1,
 
     },
     psychology: {
-      min: 0,
-      current: 0,
+      min: 10,
+      current: 10,
 
     },
+    // readLips: {
+    //   min: 0,
+    //   current: 0,
+    // },
     ride: {
-      min: 0,
-      current: 0,
+      min: 5,
+      current: 5,
     },
     science: {
-      min: 0,
-      current: 0,
+      min: 1,
+      current: 1,
     },
     astronomy: {
       min: 0,
@@ -298,7 +307,7 @@ const Skills = () => {
 
     },
     sleightOfHand: {
-      min: 0,
+      min: 10,
       current: 0,
     },
     spotHidden: {
@@ -307,28 +316,28 @@ const Skills = () => {
 
     },
     stealth: {
-      min: 0,
-      current: 0,
+      min: 20,
+      current: 20,
 
     },
     survival: {
-      min: 0,
-      current: 0,
+      min: 10,
+      current: 10,
 
     },
     swim: {
-      min: 0,
-      current: 0,
+      min: 20,
+      current: 20,
 
     },
     throw: {
-      min: 0,
-      current: 0,
+      min: 20,
+      current: 20,
 
     },
     track: {
-      min: 0,
-      current: 0,
+      min: 10,
+      current: 10,
 
     }
   });
@@ -373,22 +382,22 @@ const Skills = () => {
   const points = getSkillsPoint();
   const [currentPoints, changeCurrentPoints] = useState(0);
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    let value = event.target.value;
-    value = Number.isNaN(value) ? 0 : value;
-    let oldValue;
 
-    if (value < 0) return;
+  const handleChange = (name, increment) => {
+    console.log(name + " " + increment)
+    const currentSkill = currentSkills[name];
+    const min = currentSkill.min;
+    const previousValue = currentSkill.current;
+    const newValue = previousValue + increment;
 
+    if (newValue < min && newValue > 75) return;
 
-    oldValue = currentSkills[name].current;
-    if (!checkPointsLeft(oldValue, value)) return;
+    if (!checkPointsLeft(previousValue, newValue)) return;
 
-    changeCurrentPoints(prevPoints => prevPoints + (value - oldValue));
+    changeCurrentPoints(prevPoints => prevPoints + (newValue - previousValue));
 
     setSkills(previousInputs => {
-      return {...previousInputs, [name]: {...previousInputs[name], current: value}};
+      return {...previousInputs, [name]: {...previousInputs[name], current: newValue}};
     });
   }
 
@@ -411,8 +420,11 @@ const Skills = () => {
         {
           Object.entries(currentSkills).map(([skill, value], index) => {
             return (
-              <Skill name={skill} key={index} value={value.current} parent={value.parent}
-                     handleChange={(e) => handleChange(e)}/>
+              <Skill name={skill} key={index}
+                     min={value.min} value={value.current}
+                     parent={value.parent}
+                     handleChange={(name, increment) => handleChange(name, increment)}/>
+
             )
           })
         }

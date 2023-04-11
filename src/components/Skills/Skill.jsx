@@ -18,10 +18,14 @@ const Skill = props => {
       <input
         type="number"
         name={props.name}
-        value={props.value || 0}
+        value={props.value || props.min}
         id={props.name}
-        onChange={(event) => props.handleChange(event, props.parent)}
+        disabled
       />
+      <button onClick={(e) => props.handleChange(props.name, -5)}>-5</button>
+      <button onClick={(e) => props.handleChange(props.name, -1)}>-1</button>
+      <button onClick={(e) => props.handleChange(props.name, 1)}>+1</button>
+      <button onClick={(e) => props.handleChange(props.name, 5)}>+5</button>
     </div>
   );
 };

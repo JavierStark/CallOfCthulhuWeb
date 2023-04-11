@@ -23,13 +23,28 @@
     grid-auto-flow: column;
     grid-template-rows: repeat(35, 1fr);
 
+    gap: 0.4rem;
+
     text-align: left;
 }
 
 .skill-div {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 4fr 2fr 1fr 1fr 1fr 1fr;
     width: 50vh;
+    gap: 0.1rem;
+}
+
+.skill-div input {
+    width: 100%;
+    text-align: center;
+}
+
+.skill-div input:disabled {
+    opacity: 1;
+    background: aliceblue;
+    border: transparent;
+    border-radius: 5px;
 }
 
 .points-label {

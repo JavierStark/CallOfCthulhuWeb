@@ -13,13 +13,10 @@ Flamethrower (10%)—see Firearms
 Garrote (15%)—see Fighting
 Handgun (20%)—see Firearms
 Heavy Weapons (10%)—see Firearms
-Hypnosis (01%) [Uncommon]
 Language (Other) (01%) [Specializations]
 Machine Gun (10%)—see Firearms
 Pilot (01%) [Specializations]
-Read Lips (01%) [Uncommon]
 Rifle (25%)—see Firearms
-Science (01%) [Specializations]
 Shotgun (25%)—see Firearms (Rifle/Shotgun)
 Spear (20%)—see Firearms (or Throw)
 Submachine Gun (15%)—see Firearms
