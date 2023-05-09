@@ -4,13 +4,11 @@ import Occupations from '../../assets/Occupations/occupations.json'
 import {useNavigate} from "react-router-dom";
 
 const Occupation = () => {
-  const [currentOccupation, setOccupation] = useState(Occupations[0]);
+
+  const [currentOccupation, setOccupation] = useState(Occupations[0])
 
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   console.log(currentOccupation)
-  // }, [currentOccupation])
 
   const handleChange = (name) => {
     setOccupation(Occupations.find(e => {

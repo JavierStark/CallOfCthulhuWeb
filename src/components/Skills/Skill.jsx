@@ -12,9 +12,20 @@ const Skill = props => {
 
   return (
     <div className={'skill-div'}>
-      <label htmlFor={props.name} className={'skill-label'}>
-        {(props.parent ? '-----' : '') + formatSkillName(props.name)}
-      </label>
+      {!props.isSpec ?
+        <label htmlFor={props.name} className={'skill-label'}>
+          {formatSkillName(props.name)}
+        </label> :
+        <input
+          style={{gridArea: 'a'}}
+          className={'spec-placeholder'}
+          type={"text"}
+          name={props.name}
+          placeholder={formatSkillName(props.name)}
+          onChange={(e) => props.handleSpecNameChange(e)}
+        >
+        </input>
+      }
       <input
         type="number"
         name={props.name}
@@ -22,10 +33,10 @@ const Skill = props => {
         id={props.name}
         disabled
       />
-      <button onClick={(e) => props.handleChange(props.name, -5)}>-5</button>
-      <button onClick={(e) => props.handleChange(props.name, -1)}>-1</button>
-      <button onClick={(e) => props.handleChange(props.name, 1)}>+1</button>
-      <button onClick={(e) => props.handleChange(props.name, 5)}>+5</button>
+      <button type={"button"} style={{gridArea: 'c'}} onClick={(e) => props.handleChange(props.name, -5)}>-5</button>
+      <button type={"button"} style={{gridArea: 'd'}} onClick={(e) => props.handleChange(props.name, -1)}>-1</button>
+      <button type={"button"} style={{gridArea: 'e'}} onClick={(e) => props.handleChange(props.name, 1)}>+1</button>
+      <button type={"button"} style={{gridArea: 'f'}} onClick={(e) => props.handleChange(props.name, 5)}>+5</button>
     </div>
   );
 };

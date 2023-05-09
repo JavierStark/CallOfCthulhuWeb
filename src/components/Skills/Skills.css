@@ -1,3 +1,12 @@
+form {
+    width: 80%;
+}
+
+button, input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 .calculations-container {
     padding: 1rem;
     margin-bottom: 1rem;
@@ -12,6 +21,7 @@
     font-size: 1.5rem;
 }
 
+
 .skills-container {
     padding: 1rem;
 
@@ -21,7 +31,7 @@
 
     display: grid;
     grid-auto-flow: column;
-    grid-template-rows: repeat(35, 1fr);
+    grid-template-rows: repeat(28, 1fr);
 
     gap: 0.4rem;
 
@@ -29,22 +39,49 @@
 }
 
 .skill-div {
+    padding: 0.3rem;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: 4fr 2fr 1fr 1fr 1fr 1fr;
-    width: 50vh;
-    gap: 0.1rem;
+    grid-template-areas: "a b c d e f";
+
+    width: 100%;
+    gap: 0.5rem;
+
+    
+}
+
+.skill-div input, button {
+    padding: 0;
+}
+
+.skill-div:hover {
+    background: var(--primary-button-hover);
+    color: var(--primary-background);
 }
 
 .skill-div input {
     width: 100%;
     text-align: center;
+    border-radius: 5px;
+    border: transparent;
+}
+
+.skill-div label {
+    display: flex;
+    align-items: center;
+}
+
+.skill-div .spec-placeholder {
+    text-align: start;
+    padding-left: 1rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .skill-div input:disabled {
     opacity: 1;
     background: aliceblue;
-    border: transparent;
-    border-radius: 5px;
 }
 
 .points-label {
@@ -58,7 +95,7 @@
 }
 
 .skill-label:after {
-    content: '.................................................';
+    content: '................................................................................................................';
 }
 
 .points-input {
@@ -74,3 +111,31 @@
     width: 70%;
 }
 
+@media only screen and (max-width: 1350px) {
+    .skills-container {
+        grid-auto-flow: row;
+        justify-content: center;
+    }
+
+    .skill-div label {
+        grid-area: a;
+    }
+
+    .skill-div input {
+        grid-area: b;
+    }
+
+    .skill-div {
+        font-size: 1.5rem;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+        "a a a b"
+        "c d e f";
+
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+}

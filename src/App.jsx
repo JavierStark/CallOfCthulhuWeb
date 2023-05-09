@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import Home from "./components/Home/Home.jsx";
 import Occupation from "./components/Occupation/Occupation.jsx";
 import Skills from "./components/Skills/Skills.jsx";
-import PDFTest from "./components/PDFTest/PDFTest.jsx";
+import PDFCreator from "./components/PDFCreator/PDFCreator.jsx";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path={'/stats'} element={<Stats/>}/>
         <Route path={'/occupation'} element={<Occupation/>}/>
         <Route path={'/skills'} element={<Skills/>}/>
-        <Route path={'/pdf-test'} element={<PDFTest/>}/>
+        <Route path={'/pdf-creator'} element={<PDFCreator/>}/>
       </Routes>
       <Footer/>
     </div>

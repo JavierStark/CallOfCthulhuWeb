@@ -1,6 +1,7 @@
 import './Skills.css'
 import {useEffect, useState} from "react";
 import Skill from "./Skill.jsx";
+import {useNavigate} from "react-router-dom";
 
 const Skills = () => {
 
@@ -8,49 +9,29 @@ const Skills = () => {
     accounting: {
       min: 5,
       current: 5,
-
     },
-    // animalHandling: {
-    //   min: 0,
-    //   current: 0,
-    //
-    // },
     anthropology: {
       min: 1,
       current: 1,
-
     },
     appraise: {
       min: 5,
       current: 5,
-
     },
     archaeology: {
       min: 1,
       current: 1,
 
     },
-    artAndCraft: {
+    artAndCraftSpec1: {
       min: 5,
       current: 5,
-
+      isSpec: true,
     },
-    acting: {
-      min: 0,
-      current: 0,
-      parent: true,
-    },
-    fineArt: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    photography: {
-      min: 0,
-      current: 0,
-      parent: true,
-
+    artAndCraftSpec2: {
+      min: 5,
+      current: 5,
+      isSpec: true,
     },
     // artillery: {
     //   min: 0,
@@ -60,7 +41,6 @@ const Skills = () => {
     charm: {
       min: 15,
       current: 15,
-
     },
     climb: {
       min: 20,
@@ -82,11 +62,6 @@ const Skills = () => {
       current: 5,
 
     },
-    // diving: {
-    //   min: 0,
-    //   current: 0,
-    //
-    // },
     dodge: {
       min: 0,
       current: 0,
@@ -107,10 +82,14 @@ const Skills = () => {
       current: 2,
 
     },
-    fighting: {
+    fightingBrawl: {
       min: 25,
       current: 25,
-
+    },
+    fightingSpec: {
+      min: 25,
+      current: 25,
+      isSpec: true,
     },
     firearmsHandgun: {
       min: 20,
@@ -118,9 +97,13 @@ const Skills = () => {
 
     },
     firearmsRifle_Shotgun: {
-      min: 20,
-      current: 20,
-
+      min: 25,
+      current: 25,
+    },
+    firearmsSpec: {
+      min: 25,
+      current: 25,
+      isSpec: true,
     },
     firstAid: {
       min: 30,
@@ -145,12 +128,22 @@ const Skills = () => {
     languageOwn: {
       min: 0,
       current: 0,
-
+      isSpec: true,
     },
     languageOther: {
       min: 1,
       current: 1,
-
+      isSpec: true,
+    },
+    languageSpec1: {
+      min: 1,
+      current: 1,
+      isSpec: true,
+    },
+    languageSpec2: {
+      min: 1,
+      current: 1,
+      isSpec: true,
     },
     law: {
       min: 5,
@@ -197,20 +190,15 @@ const Skills = () => {
       current: 5,
 
     },
-    // operateHeavyMachinery: {
-    //   min: 0,
-    //   current: 0,
-    //
-    // },
     persuade: {
       min: 10,
       current: 10,
 
     },
-    pilot: {
+    pilotSpec: {
       min: 1,
       current: 1,
-
+      isSpec: true,
     },
     psychoanalysis: {
       min: 1,
@@ -222,89 +210,24 @@ const Skills = () => {
       current: 10,
 
     },
-    // readLips: {
-    //   min: 0,
-    //   current: 0,
-    // },
     ride: {
       min: 5,
       current: 5,
     },
-    science: {
+    scienceSpec1: {
       min: 1,
       current: 1,
+      isSpec: true,
     },
-    astronomy: {
-      min: 0,
-      current: 0,
-      parent: true,
-
+    scienceSpec2: {
+      min: 1,
+      current: 1,
+      isSpec: true,
     },
-    biology: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    botany: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    chemistry: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    cryptography: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    forensics: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    geology: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    mathematics: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    meteorology: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    pharmacy: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    physics: {
-      min: 0,
-      current: 0,
-      parent: true,
-
-    },
-    zoology: {
-      min: 0,
-      current: 0,
-      parent: true,
-
+    scienceSpec3: {
+      min: 1,
+      current: 1,
+      isSpec: true,
     },
     sleightOfHand: {
       min: 10,
@@ -320,10 +243,10 @@ const Skills = () => {
       current: 20,
 
     },
-    survival: {
+    survivalSpec: {
       min: 10,
       current: 10,
-
+      isSpec: true,
     },
     swim: {
       min: 20,
@@ -339,8 +262,31 @@ const Skills = () => {
       min: 10,
       current: 10,
 
-    }
+    },
+    uncommon1: {
+      min: 1,
+      current: 1,
+      isSpec: true,
+    },
+    uncommon2: {
+      min: 1,
+      current: 1,
+      isSpec: true,
+    },
+    uncommon3: {
+      min: 5,
+      current: 5,
+      isSpec: true,
+    },
+    uncommon4: {
+      min: 5,
+      current: 5,
+      isSpec: true,
+    },
   });
+  const [interestMode, setInterestMode] = useState(false);
+  const navigate = useNavigate();
+
 
   const convertSkillPointStringToList = (pointsExpression) => {
     return pointsExpression.replace(' or ', ' ').replaceAll(' × ', '').replace('(', '').replace(')', '').replace(' + ', ' ').split(' ');
@@ -348,10 +294,11 @@ const Skills = () => {
 
   const calculatePoints = (pointsExpressionList, stats) => {
     let points = 0;
+    const interestPoints = stats['int'];
     let eduMultiplier = pointsExpressionList[0][3];
     points += stats.edu * eduMultiplier;
 
-    if (pointsExpressionList.length < 2) return points;
+    if (pointsExpressionList.length < 2) return [points, interestPoints];
 
     let secondStat = pointsExpressionList[1].replace(/[0-9]/, '');
     let secondOperator = stats[secondStat];
@@ -364,7 +311,7 @@ const Skills = () => {
 
     points += secondOperator * 2;
 
-    return points;
+    return [points, interestPoints];
   }
 
   const getSkillsPoint = () => {
@@ -376,45 +323,76 @@ const Skills = () => {
 
     let pointsExpressionList = convertSkillPointStringToList(pointsExpression);
 
+
     return calculatePoints(pointsExpressionList, stats);
   };
 
-  const points = getSkillsPoint();
-  const [currentPoints, changeCurrentPoints] = useState(0);
+  const [points, interestPoints] = getSkillsPoint();
+  const [currentPoints, changeCurrentPoints] = useState([0, 0]);
 
 
   const handleChange = (name, increment) => {
-    console.log(name + " " + increment)
     const currentSkill = currentSkills[name];
     const min = currentSkill.min;
     const previousValue = currentSkill.current;
-    const newValue = previousValue + increment;
+    let newValue = previousValue + increment;
 
-    if (newValue < min && newValue > 75) return;
+    if (newValue > 75) return;
+    if (newValue < min) newValue = min;
 
     if (!checkPointsLeft(previousValue, newValue)) return;
+    console.log(newValue + " " + min)
 
-    changeCurrentPoints(prevPoints => prevPoints + (newValue - previousValue));
+    //[prevPoints[interestMode ? 1 : 0] + (newValue - previousValue)]
+    changeCurrentPoints(prevPoints =>
+      interestMode ? [prevPoints[0], prevPoints[1] + (newValue - previousValue)] : [prevPoints[0] + (newValue - previousValue), prevPoints[1]]
+    );
 
     setSkills(previousInputs => {
       return {...previousInputs, [name]: {...previousInputs[name], current: newValue}};
     });
   }
 
+  const handleSpecNameChange = (e) => {
+    const defaultName = e.target.name;
+    const newName = e.target.value;
+    console.log(defaultName)
+    setSkills(previousInputs => {
+      return {...previousInputs, [defaultName]: {...previousInputs[defaultName], specName: newName}};
+    });
+  }
+
   const checkPointsLeft = (oldValue, newValue) => {
     let change = newValue - oldValue;
 
-    return currentPoints + change <= 200;
+    return currentPoints[interestMode ? 1 : 0] + change <= (interestMode ? interestPoints : points);
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!interestMode) {
+      setInterestMode(true);
+      console.log("Set")
+      return;
+    }
+    console.log(currentSkills);
+    window.localStorage.setItem("skills", JSON.stringify(currentSkills));
+
+    navigate('/pdf-creator');
   }
 
 
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
       <div className={'calculations-container'}>
         <label className={'points-label'} htmlFor={'totalPoints'}> Total Points</label>
-        <input className={'points-input'} type="number" disabled value={points} id={'totalPoints'}/>
+        <input className={'points-input'} type="number" disabled value={interestMode ? interestPoints : points}
+               id={'totalPoints'}/>
         <label className={'points-label'} htmlFor={'currentPoints'}> Points Left</label>
-        <input className={'points-input'} type="number" disabled value={points - currentPoints} id={'currentPoints'}/>
+        <input className={'points-input'} type="number" disabled
+               value={interestMode ? (interestPoints - currentPoints[1]) : (points - currentPoints[0])}
+               id={'currentPoints'}/>
+
       </div>
       <div className={'skills-container'}>
         {
@@ -422,14 +400,16 @@ const Skills = () => {
             return (
               <Skill name={skill} key={index}
                      min={value.min} value={value.current}
-                     parent={value.parent}
-                     handleChange={(name, increment) => handleChange(name, increment)}/>
+                     isSpec={value.isSpec}
+                     handleChange={(name, increment) => handleChange(name, increment)}
+                     handleSpecNameChange={(e) => handleSpecNameChange(e)}/>
 
             )
           })
         }
       </div>
-    </div>
+      <button type={'submit'} className={''}>Submit</button>
+    </form>
   );
 };
 
