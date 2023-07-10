@@ -2,7 +2,8 @@ form {
     width: 80%;
 }
 
-button, input {
+button,
+input {
     font-family: inherit;
     font-size: inherit;
 }
@@ -24,6 +25,7 @@ button, input {
 
 .skills-container {
     padding: 1rem;
+    margin-bottom: 1rem;
 
     border-radius: 5px;
 
@@ -31,7 +33,7 @@ button, input {
 
     display: grid;
     grid-auto-flow: column;
-    grid-template-rows: repeat(28, 1fr);
+    grid-template-rows: repeat(29, 1fr);
 
     gap: 0.4rem;
 
@@ -48,10 +50,11 @@ button, input {
     width: 100%;
     gap: 0.5rem;
 
-    
+
 }
 
-.skill-div input, button {
+.skill-div input,
+button {
     padding: 0;
 }
 
@@ -131,8 +134,8 @@ button, input {
         grid-template-columns: repeat(4, 1fr);
 
         grid-template-areas:
-        "a a a b"
-        "c d e f";
+            "a a a b"
+            "c d e f";
 
         width: 100%;
         gap: 0.5rem;

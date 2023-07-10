@@ -1,7 +1,7 @@
 import './Skills.css'
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import Skill from "./Skill.jsx";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Skills = () => {
 
@@ -23,12 +23,12 @@ const Skills = () => {
       current: 1,
 
     },
-    artAndCraftSpec1: {
+    artCraft1: {
       min: 5,
       current: 5,
       isSpec: true,
     },
-    artAndCraftSpec2: {
+    artCraft2: {
       min: 5,
       current: 5,
       isSpec: true,
@@ -82,25 +82,30 @@ const Skills = () => {
       current: 2,
 
     },
-    fightingBrawl: {
+    fighting: {
       min: 25,
       current: 25,
     },
-    fightingSpec: {
+    fighting1: {
       min: 25,
       current: 25,
       isSpec: true,
     },
-    firearmsHandgun: {
+    fighting2: {
+      min: 25,
+      current: 25,
+      isSpec: true,
+    },
+    fireArmsHandguns: {
       min: 20,
       current: 20,
 
     },
-    firearmsRifle_Shotgun: {
+    fireArmsRifles: {
       min: 25,
       current: 25,
     },
-    firearmsSpec: {
+    fireArms: {
       min: 25,
       current: 25,
       isSpec: true,
@@ -125,22 +130,22 @@ const Skills = () => {
       current: 20,
 
     },
-    languageOwn: {
+    ownLanguage: {
       min: 0,
       current: 0,
       isSpec: true,
     },
-    languageOther: {
+    otherLanguage: {
       min: 1,
       current: 1,
       isSpec: true,
     },
-    languageSpec1: {
+    otherLanguage1: {
       min: 1,
       current: 1,
       isSpec: true,
     },
-    languageSpec2: {
+    otherLanguage2: {
       min: 1,
       current: 1,
       isSpec: true,
@@ -195,7 +200,7 @@ const Skills = () => {
       current: 10,
 
     },
-    pilotSpec: {
+    pilot: {
       min: 1,
       current: 1,
       isSpec: true,
@@ -214,17 +219,17 @@ const Skills = () => {
       min: 5,
       current: 5,
     },
-    scienceSpec1: {
+    science1: {
       min: 1,
       current: 1,
       isSpec: true,
     },
-    scienceSpec2: {
+    science2: {
       min: 1,
       current: 1,
       isSpec: true,
     },
-    scienceSpec3: {
+    science3: {
       min: 1,
       current: 1,
       isSpec: true,
@@ -243,7 +248,7 @@ const Skills = () => {
       current: 20,
 
     },
-    survivalSpec: {
+    survival: {
       min: 10,
       current: 10,
       isSpec: true,
@@ -263,22 +268,22 @@ const Skills = () => {
       current: 10,
 
     },
-    uncommon1: {
+    custom1: {
       min: 1,
       current: 1,
       isSpec: true,
     },
-    uncommon2: {
+    custom2: {
       min: 1,
       current: 1,
       isSpec: true,
     },
-    uncommon3: {
+    custom3: {
       min: 5,
       current: 5,
       isSpec: true,
     },
-    uncommon4: {
+    custom4: {
       min: 5,
       current: 5,
       isSpec: true,
@@ -343,13 +348,14 @@ const Skills = () => {
     if (!checkPointsLeft(previousValue, newValue)) return;
     console.log(newValue + " " + min)
 
+    let change = newValue - previousValue
     //[prevPoints[interestMode ? 1 : 0] + (newValue - previousValue)]
     changeCurrentPoints(prevPoints =>
-      interestMode ? [prevPoints[0], prevPoints[1] + (newValue - previousValue)] : [prevPoints[0] + (newValue - previousValue), prevPoints[1]]
+      interestMode ? [prevPoints[0], prevPoints[1] + change] : [prevPoints[0] + change, prevPoints[1]]
     );
 
     setSkills(previousInputs => {
-      return {...previousInputs, [name]: {...previousInputs[name], current: newValue}};
+      return { ...previousInputs, [name]: { ...previousInputs[name], current: newValue } };
     });
   }
 
@@ -358,7 +364,7 @@ const Skills = () => {
     const newName = e.target.value;
     console.log(defaultName)
     setSkills(previousInputs => {
-      return {...previousInputs, [defaultName]: {...previousInputs[defaultName], specName: newName}};
+      return { ...previousInputs, [defaultName]: { ...previousInputs[defaultName], specName: newName } };
     });
   }
 
@@ -372,7 +378,7 @@ const Skills = () => {
     event.preventDefault();
     if (!interestMode) {
       setInterestMode(true);
-      console.log("Set")
+      window.scroll(0, 0);
       return;
     }
     console.log(currentSkills);
@@ -383,32 +389,39 @@ const Skills = () => {
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} >
       <div className={'calculations-container'}>
         <label className={'points-label'} htmlFor={'totalPoints'}> Total Points</label>
         <input className={'points-input'} type="number" disabled value={interestMode ? interestPoints : points}
-               id={'totalPoints'}/>
+          id={'totalPoints'} />
         <label className={'points-label'} htmlFor={'currentPoints'}> Points Left</label>
         <input className={'points-input'} type="number" disabled
-               value={interestMode ? (interestPoints - currentPoints[1]) : (points - currentPoints[0])}
-               id={'currentPoints'}/>
-
+          value={interestMode ? (interestPoints - currentPoints[1]) : (points - currentPoints[0])}
+          id={'currentPoints'} />
       </div>
+      {
+        interestMode ?
+          <div className={'calculations-container'}>
+            Add points only to the following interest skills:
+            <br />
+            {JSON.parse(window.localStorage.getItem('occupation')).skills}
+          </div> : <></>
+      }
       <div className={'skills-container'}>
         {
           Object.entries(currentSkills).map(([skill, value], index) => {
             return (
               <Skill name={skill} key={index}
-                     min={value.min} value={value.current}
-                     isSpec={value.isSpec}
-                     handleChange={(name, increment) => handleChange(name, increment)}
-                     handleSpecNameChange={(e) => handleSpecNameChange(e)}/>
+                min={value.min} value={value.current}
+                isSpec={value.isSpec}
+                handleChange={(name, increment) => handleChange(name, increment)}
+                handleSpecNameChange={(e) => handleSpecNameChange(e)} />
 
             )
           })
         }
       </div>
-      <button type={'submit'} className={''}>Submit</button>
+      <button type={'submit'} className={''}>{interestMode ? 'Download Pdf' : 'Submit'}</button>
     </form>
   );
 };

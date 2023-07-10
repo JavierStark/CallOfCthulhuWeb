@@ -1,16 +1,12 @@
 import React from 'react';
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
-      <a href="/stats">Stats</a>
-      <br/>
-      <a href="/occupation">Occupations</a>
-      <br/>
-      <a href="/skills">Skills</a>
-      <br/>
-      <a href="/pdf-test">PDF test</a>
+      <button onClick={() => navigate('/stats')}>Start crating a character</button>
     </div>
   );
 };
